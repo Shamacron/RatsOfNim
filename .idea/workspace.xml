@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ea61c24-9d0e-4afd-91b0-dc15cd477aeb" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/neumont/csc130/EMB/Board.java" afterPath="$PROJECT_DIR$/src/main/java/edu/neumont/csc130/EMB/Board.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -17,13 +18,13 @@
       <file leaf-file-name="Board.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/neumont/csc130/EMB/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="115" column="69" lean-forward="false" selection-start-line="115" selection-start-column="69" selection-end-line="115" selection-end-column="69" />
+            <state relative-caret-position="136">
+              <caret line="8" column="55" lean-forward="false" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#155#172#0" expanded="true" />
-                <element signature="e#3517#3518#0" expanded="true" />
-                <element signature="e#3554#3555#0" expanded="true" />
+                <element signature="e#227#244#0" expanded="true" />
+                <element signature="e#3901#3902#0" expanded="true" />
+                <element signature="e#3938#3939#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -238,7 +239,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3138000" />
+    <option name="totallyTimeSpent" value="3493000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1293" height="693" extended-state="6" />
@@ -285,13 +286,26 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/neumont/csc130/EMB/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
+        <state relative-caret-position="1955">
           <caret line="115" column="69" lean-forward="false" selection-start-line="115" selection-start-column="69" selection-end-line="115" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#155#172#0" expanded="true" />
-            <element signature="e#3517#3518#0" expanded="true" />
-            <element signature="e#3554#3555#0" expanded="true" />
+            <element signature="e#227#244#0" expanded="true" />
+            <element signature="e#3901#3902#0" expanded="true" />
+            <element signature="e#3938#3939#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/neumont/csc130/EMB/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="55" lean-forward="false" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#227#244#0" expanded="true" />
+            <element signature="e#3901#3902#0" expanded="true" />
+            <element signature="e#3938#3939#0" expanded="true" />
           </folding>
         </state>
       </provider>
