@@ -24,7 +24,9 @@ public class Board
     //isValidTokenChoice checks to make sure that the amount of tokens to be removed is valid
     public boolean isValidTokenChoice(int tokensToRemove, String chosenHeap)
     {
-        //Added String chosenHeap to the perameters
+        //Added String chosenHeap to the parameters
+        //need the chosen heap to make be able to check if the amount
+        //of tokens to remove is a valid input
 
         int tokensInHeap = getTokensInHeap(chosenHeap);
         //sets tokensInHeap to the amount of tokens in the chosen heap
@@ -50,7 +52,7 @@ public class Board
         heaps.replace(heap, getTokensInHeap(heap) - tokensToRemove);
     }
 
-    //checks to see if the game is in a winning state
+    //checks to see if the game is in a winning (losing?) state
     public boolean checkForLoss()
     {
         for (Integer tokens : heaps.values())
