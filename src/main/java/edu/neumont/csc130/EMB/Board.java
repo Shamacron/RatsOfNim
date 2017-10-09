@@ -7,6 +7,33 @@ public class Board
 {
     private Map<String, Integer> heaps = new HashMap<String, Integer>();
 
+    //Creates the board based on difficulty
+    public Board(int difficulty)
+    {
+        if(difficulty == 1)
+        {
+            //If the selected difficulty is 1 (easy)
+            //Create 2 heaps with 2 and 2 tokens respectively
+            heaps.put("A", 2);
+            heaps.put("B", 2);
+        }else if(difficulty == 2)
+        {
+            //If the selected difficulty is 2 (medium)
+            //Create 3 heaps with 2, 5, and 7 tokens respectively
+            heaps.put("A", 2);
+            heaps.put("B", 5);
+            heaps.put("C", 7);
+        }else
+        {
+            //If the selected difficulty is 3 (hard)
+            //Create 4 heaps with 2, 3, 8, and 9 tokens respectively
+            heaps.put("A", 2);
+            heaps.put("B", 3);
+            heaps.put("C", 8);
+            heaps.put("D", 9);
+        }
+    }
+
     //isValidHeapChoice checks to make sure that the chosen heap is valid
     public boolean isValidHeapChoice(String heap)
     {
@@ -73,6 +100,21 @@ public class Board
     public int getTokensInHeap(String key)
     {
         return heaps.get(key);
+    }
+
+    //Overrides the toString to make a readable format for the board
+    @Override
+    public String toString()
+    {
+        String printedBoard = "";
+        //The string that will be returned at the end
+        for(String heap : heaps.keySet())
+        {
+            //For each heap in the hashmap, add onto the printedBoard string the heap's name and amount of tokens
+            printedBoard += heap + ": " + heaps.get(heap) + "\n";
+        }
+        //Return the string that shows the current state of the board
+        return printedBoard;
     }
 
 }
