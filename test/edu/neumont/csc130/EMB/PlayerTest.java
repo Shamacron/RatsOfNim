@@ -7,6 +7,7 @@ import static org.junit.Assert.*;
 public class PlayerTest {
   @Test
   public void getName() throws Exception {
+      Player p2 = new Player();
 	  Player p = new Player();
 	  p.setName("Bill");
 	  assertTrue(p.getName().equals("Bill"));
@@ -16,7 +17,7 @@ public class PlayerTest {
   public void isValidName() {
 	  Player p = new Player();
 	  assertTrue(p.isValidName("harry")); 
-	  assertTrue(p.isValidName(" Rhonda"));
+	  assertFalse(p.isValidName(" Rhonda"));
 	  assertTrue(p.isValidName("888"));
 	  assertFalse(p.isValidName("jo%n"));
 	  assertFalse(p.isValidName("sd 8"));
