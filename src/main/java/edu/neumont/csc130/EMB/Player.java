@@ -16,7 +16,7 @@ public class Player {
 		return name;
 	}
 
-	public void setName() throws IOException {
+	public void setName() {
 		String input;
 		boolean valid = false;
 		System.out.println("Please enter your name using only alphanumeric characters: ");

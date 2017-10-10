@@ -10,7 +10,10 @@ public class Board
      */
     private Map<String, Integer> heaps = new HashMap<String, Integer>();
 
-    //Creates the board based on difficulty
+    /**
+     * Creates the board based on difficulty
+     * @param difficulty
+     */
     public Board(int difficulty)
     {
         if (difficulty == 1)
