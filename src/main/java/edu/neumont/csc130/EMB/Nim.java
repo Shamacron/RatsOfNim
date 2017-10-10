@@ -9,14 +9,26 @@ public class Nim {
   private Board board;
 
   public void play() {
-    printInstructions();
-    chooseGameMode();
-    chooseDifficulty();
+    do {
+      printInstructions();
+      chooseGameMode();
+      chooseDifficulty();
 
+      while (!board.checkForLoss()) {
+        for (int i = 0; i < players.length; i++) {
+          System.out.println("\n=================\n");
+          System.out.println(players[i].getName() + "'s Turn");
+          System.out.println(board);
+          players[i].takeTurn(board);
 
+          if (board.checkForLoss()) {
+            System.out.println(players[i].getName() + " Lost");
+            break;
+          }
+        }
+      }
 
-
-
+    } while (continuePlaying());
   }
 
   /**
@@ -43,7 +55,7 @@ public class Nim {
 
   /**
    * Gets Console Input
-   * @return
+   * @return Input as String
    */
   public static String getConsoleInput() {
     System.out.print("> ");
@@ -65,6 +77,9 @@ public class Nim {
     return input;
   }
 
+  /**
+   * Allow User to choose a game mode
+   */
   private void chooseGameMode() {
     System.out.println("Choose a Game Mode!");
     System.out.println("1:Player Vs Computer\t2:Player Vs Player");
@@ -86,10 +101,15 @@ public class Nim {
 
   }
 
+  /**
+   * Create the Players based on the game mode
+   * @param gameMode
+   */
   private void createPlayers(int gameMode) {
+    // Game Mode is set up in a way that option 1:pvc = 1 person, and option 2:pvp = 2 people
     for (int i = 0; i < gameMode; i++) {
       players[i] = new Player();
-      System.out.println("Please enter your name using only alphanumeric characters: ");
+      System.out.println("Player #" + (i+1) + ": Please enter your name using only alphanumeric characters: ");
 
       String input = "";
       boolean valid = false;
@@ -109,6 +129,9 @@ public class Nim {
     }
   }
 
+  /**
+   * Allow User to Choose a Difficulty
+   */
   private void chooseDifficulty() {
     System.out.println("Choose a Game Difficulty!");
     System.out.println("1:Easy\t2:Medium\t3:Hard");
@@ -127,6 +150,21 @@ public class Nim {
     int difficulty = Integer.parseInt(input.trim());
 
     board = new Board(difficulty);
+  }
+
+  /**
+   * Prompts whether they want to play again
+   * @return boolean
+   */
+  private boolean continuePlaying() {
+    System.out.println("Play Again? y/n");
+
+    String input = getConsoleInput();
+    if (input.trim().equalsIgnoreCase("y") || input.trim().equalsIgnoreCase("yes")) {
+      return true;
+    }
+
+    return false;
   }
 
 }

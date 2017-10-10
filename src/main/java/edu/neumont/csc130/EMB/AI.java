@@ -24,6 +24,7 @@ public class AI extends Player {
 		do {
 			// random integer conversion to Char, and then to String
 			heapChoice = Character.toString((char)(rand.nextInt(4)+65));
+			heapChoice = heapChoice.toUpperCase();
 			// validates random choice validity
 			// returns true if possible, false if not
 			// loops until valid heap
@@ -45,6 +46,9 @@ public class AI extends Player {
 				valid = true;
 			}
 		} while (!valid);
+
+		System.out.println("Removed " + tokenChoice + " tokens from " + heapChoice);
+
 		
 		// removes tokens
 		board.removeTokens(heapChoice, tokenChoice);
