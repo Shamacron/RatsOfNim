@@ -65,7 +65,7 @@ public class Player {
 			if (board.isValidHeapChoice(heapChoice)) {
 				valid = true;
 			} else {
-				System.out.println("Invalid name, your name may only contain alphanumeric characters. Please try again:");
+				System.out.println("Invalid Heap Choice. Please try again:");
 			}
 		} while (!valid);
 		valid = false; 
