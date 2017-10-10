@@ -25,16 +25,7 @@ public class Player {
 		return Pattern.compile(regex, Pattern.MULTILINE).matcher(name).matches();
 	}
 
-	private String getConsoleInput() {
-		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-		String input = null;
-		try {
-			input = in.readLine();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return input.trim();
-	}
+
 
 	public void takeTurn(Board board) {
 		System.out.println("Enter the corresponding letter of the heap you would like to remove token(s) from:");
@@ -42,7 +33,7 @@ public class Player {
 		String heapChoice = null;
 		boolean valid = false;
 		do {
-			heapChoice = getConsoleInput();
+			heapChoice = Nim.getConsoleInput();
 			heapChoice = heapChoice.toUpperCase();
 			if (board.isValidHeapChoice(heapChoice)) {
 				valid = true;
@@ -57,7 +48,7 @@ public class Player {
 
 		int tokenChoice;
 		do {
-			tokenChoice = Integer.parseInt(getConsoleInput());
+			tokenChoice = Integer.parseInt(Nim.getConsoleInput());
 			if (board.isValidTokenChoice(tokenChoice, heapChoice)) {
 				valid = true;
 			} else {

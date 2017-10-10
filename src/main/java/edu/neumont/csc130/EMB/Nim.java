@@ -19,6 +19,9 @@ public class Nim {
 
   }
 
+  /**
+   * Prints the Home Screen and Instructions on how to play
+   */
   private void printInstructions() {
     System.out.println( " __    __  ______  __       __ \n" +
                         "|  \\  |  \\|      \\|  \\     /  \\\n" +
@@ -38,7 +41,11 @@ public class Nim {
     System.out.println();
   }
 
-  private String getConsoleInput() {
+  /**
+   * Gets Console Input
+   * @return
+   */
+  public static String getConsoleInput() {
     System.out.print("> ");
 
     String input = "";
@@ -100,7 +107,6 @@ public class Nim {
     if (gameMode == 1) {
       players[1] = new AI();
     }
-
   }
 
   private void chooseDifficulty() {
