@@ -5,6 +5,7 @@ import java.util.Random;
 public class AI extends Player {
 
 	public AI() {
+		setName("Computer");
 	}
 
 	@Override

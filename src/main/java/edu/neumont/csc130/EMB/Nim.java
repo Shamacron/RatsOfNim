@@ -16,6 +16,7 @@ public class Nim {
 
 
 
+
   }
 
   private void printInstructions() {
@@ -81,7 +82,19 @@ public class Nim {
   private void createPlayers(int gameMode) {
     for (int i = 0; i < gameMode; i++) {
       players[i] = new Player();
-      players[i].setName();
+      System.out.println("Please enter your name using only alphanumeric characters: ");
+
+      String input = "";
+      boolean valid = false;
+      while (!valid) {
+          input = getConsoleInput();
+          if (players[i].isValidName(input)) {
+            valid = true;
+          } else {
+            System.out.println("Invalid name, your name may only contain alphanumeric characters. Please try again: ");
+          }
+      }
+      players[i].setName(input);
     }
 
     if (gameMode == 1) {

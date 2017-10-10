@@ -16,23 +16,11 @@ public class Player {
 		return name;
 	}
 
-	public void setName() {
-		String input;
-		boolean valid = false;
-		System.out.println("Please enter your name using only alphanumeric characters: ");
-		do {
-			input = getConsoleInput();
-			if (isValidName(input)) {
-				valid = true;
-				this.name = input;
-			} else {
-				System.out.println(
-						"Invalid name, your name may only contain alphanumeric characters. Please try again: ");
-			}
-		} while (!valid);
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	private boolean isValidName(String name) {
+	public boolean isValidName(String name) {
 		String regex = "^[a-zA-Z0-9]+$";
 		return Pattern.compile(regex, Pattern.MULTILINE).matcher(name).matches();
 	}
