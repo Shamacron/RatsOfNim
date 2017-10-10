@@ -45,7 +45,7 @@ public class Nim {
                         "| $$  \\$$$|   $$ \\| $$  \\$ | $$\n" +
                         " \\$$   \\$$ \\$$$$$$ \\$$      \\$$");
     System.out.println("Welcome to the game of Nim!");
-    System.out.println("Enter 0 at eny time during text entry to quit Nim");
+    System.out.println("Enter 0 at any time during text entry to quit Nim");
     System.out.println("Instructions:");
     System.out.println("\tNim is a game for two players");
     System.out.println("\tEach Player has to remove a number of tokens from a heap of their choosing");
