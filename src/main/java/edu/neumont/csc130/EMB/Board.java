@@ -47,6 +47,7 @@ public class Board
      */
     public boolean isValidHeapChoice(String heap)
     {
+        heap = heap.toUpperCase();
         if (!heaps.containsKey(heap) || heaps.get(heap) <= 0)
         {
             //If the chosen heap does not exist on the board
@@ -66,6 +67,7 @@ public class Board
      */
     public boolean isValidTokenChoice(int tokensToRemove, String chosenHeap)
     {
+        chosenHeap = chosenHeap.toUpperCase();
         //Added String chosenHeap to the parameters
         //need the chosen heap to make be able to check if the amount
         //of tokens to remove is a valid input
